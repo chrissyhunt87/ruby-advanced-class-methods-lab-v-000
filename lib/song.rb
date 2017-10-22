@@ -45,7 +45,7 @@ class Song
     new_song = Song.new
     song_array = filename.split(/(\s-\s)|\./)
     new_song.artist_name = song_array[0]
-    new_song.name = song_array[1]
+    new_song.name = song_array[2]
     new_song
   end
 
