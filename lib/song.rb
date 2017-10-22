@@ -50,7 +50,12 @@ class Song
   end
 
   def self.create_from_filename(filename)
-    
+    new_song = Song.new
+    song_array = filename.split(/(\s-\s)|\./)
+    new_song.artist_name = song_array[0]
+    new_song.name = song_array[2]
+    Song.all << new_song
+    new_song
   end
 
 end
