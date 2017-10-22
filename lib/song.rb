@@ -37,6 +37,8 @@ class Song
     detected_song = Song.all.detect {|song| song.name == name}
     if detected_song == nil
       Song.create_by_name(name)
+    else
+      detected_song
     end
   end
 
