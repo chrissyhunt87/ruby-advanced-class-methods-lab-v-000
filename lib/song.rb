@@ -34,12 +34,13 @@ class Song
   end
 
   def self.find_or_create_by_name(name)
-    detected_song = Song.find_by_name(name)
-    if detected_song == nil
-      Song.create_by_name(name)
-    else
-      detected_song
-    end
+    Song.find_by_name(name) ? Song.find_by_name(name) : Song.create_by_name(name)
+    # detected_song = Song.find_by_name(name)
+    # if detected_song == nil
+    #   Song.create_by_name(name)
+    # else
+    #   detected_song
+    # end
   end
 
 end
