@@ -22,6 +22,8 @@ class Song
 
   def new_by_name(name)
     new_song = Song.new(name)
+    Song.all << new_song
+    new_song
   end
 
 end
