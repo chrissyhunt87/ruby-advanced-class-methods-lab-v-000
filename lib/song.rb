@@ -58,4 +58,8 @@ class Song
     new_song
   end
 
+  def self.destroy_all
+    
+  end
+
 end
