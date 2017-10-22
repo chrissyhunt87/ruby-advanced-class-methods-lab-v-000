@@ -43,7 +43,10 @@ class Song
 
   def self.new_from_filename(filename)
     new_song = Song.new
-    new_song.split(/(\s-\s)|\./)
+    song_array = new_song.split(/(\s-\s)|\./)
+    new_song.artist_name = song_array[0]
+    new_song.name = song_array[1]
+    self
   end
 
 end
